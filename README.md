@@ -36,3 +36,20 @@ Por último, deverá ser feito um menu interativo com as seguintes ações imple
 
 ## Solução
 O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+
+## Funcionalidade Adicional: Validação de Placa de Carro
+Adicionei uma funcionalidade extra ao projeto que permite validar se uma string representa uma placa de carro no Brasil, seguindo o padrão comum. Esta validação utiliza uma expressão regular para garantir que a placa seja inserida corretamente
+
+Implementação
+A validação é realizada por meio do método Validador, que utiliza a expressão regular ^[A-Z]{3}[0-9][A-Z][0-9]{2}$ para garantir que a string siga o padrão de placas de carro brasileiras.
+
+public static bool Validador(string value)
+{
+    if (string.IsNullOrEmpty(value))
+    {
+        return false;
+    }
+
+    var regex = new Regex("^[A-Z]{3}[0-9][A-Z][0-9]{2}$");
+    return regex.IsMatch(value);
+}
