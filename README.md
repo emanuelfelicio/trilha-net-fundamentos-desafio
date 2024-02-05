@@ -42,7 +42,7 @@ Adicionei uma funcionalidade extra ao projeto que permite validar se uma string 
 
 Implementação
 A validação é realizada por meio do método Validador, que utiliza a expressão regular ^[A-Z]{3}[0-9][A-Z][0-9]{2}$ para garantir que a string siga o padrão de placas de carro brasileiras.
-
+```csharp
 public static bool Validador(string value)
 {
     if (string.IsNullOrEmpty(value))
