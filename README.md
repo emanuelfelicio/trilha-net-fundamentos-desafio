@@ -51,6 +51,6 @@ public static bool Validador(string value)
         return false;
     }
 
-    var regex = new Regex("^[A-Z]{3}[0-9][A-Z][0-9]{2}$");
+    var regex = new Regex("^[A-Z]{3}[0-9][A-Z][0-9]{2}");
     return regex.IsMatch(value);
 }
