@@ -41,7 +41,8 @@ O código está pela metade, e você deverá dar continuidade obedecendo as regr
 Adicionei uma funcionalidade extra ao projeto que permite validar se uma string representa uma placa de carro no Brasil, seguindo o padrão comum. Esta validação utiliza uma expressão regular para garantir que a placa seja inserida corretamente
 
 Implementação
-A validação é realizada por meio do método Validador, que utiliza a expressão regular ^[A-Z]{3}[0-9][A-Z][0-9]{2}$ para garantir que a string siga o padrão de placas de carro brasileiras.
+A validação é realizada por meio do método Validador, que utiliza a expressão regular ```^[A-Z]{3}[0-9][A-Z][0-9]{2}$``` para garantir que a string siga o padrão de placas de carro brasileiras.
+
 ```csharp
 public static bool Validador(string value)
 {
