@@ -5,15 +5,14 @@ namespace DesafioFundamentos.Models
 
     public class Estacionamento
     {
-        private decimal _precoInicial = 0;
-        private decimal _precoPorHora = 0;
-        private List<string> _veiculos = new List<string>();
-
         public Estacionamento(decimal precoInicial, decimal precoPorHora)
         {
             _precoInicial = precoInicial;
             _precoPorHora = precoPorHora;
         }
+        private decimal _precoInicial = 0;
+        private decimal _precoPorHora = 0;
+        private List<string> _veiculos = new List<string>();
 
 
         public static bool Validador(string value)
@@ -33,7 +32,7 @@ namespace DesafioFundamentos.Models
             string placa = "";
             placa = Console.ReadLine().ToUpper();
 
-            
+
             if (Validador(placa))
             {
                 if (!_veiculos.Contains(placa))
@@ -58,7 +57,7 @@ namespace DesafioFundamentos.Models
             Console.WriteLine("Digite a placa do veículo para remover:");
             string placa = "";
             placa = Console.ReadLine().ToUpper();
-            
+
             // Verifica se o veículo existe
             if (_veiculos.Any(x => x == placa))
             {
